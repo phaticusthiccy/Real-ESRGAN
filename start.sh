@@ -23,6 +23,14 @@ else
     1) clear;
         cat shell-requirements/ascii.txt
         printf "${GREEN}Installing Requirements..${NONE} \n"
+        
+        pip install basicsr
+        pip install facexlib
+        pip install gfpgan
+        pip install -r requirements.txt
+        python setup.py develop
+        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P experiments/pretrained_models
+        
         python shell-requirements/preparations.py
         clear 
         cat shell-requirements/ascii.txt
@@ -40,7 +48,14 @@ else
     2) clear;
         cat shell-requirements/ascii.txt
         printf "${GREEN}Gereksinimler Yükleniyor..${NONE} \n"
-        python shell-requirements/preparations.py
+        
+        pip install basicsr
+        pip install facexlib
+        pip install gfpgan
+        pip install -r requirements.txt
+        python setup.py develop
+        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P experiments/pretrained_models
+        
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Görüntü Yolunuzu Seçin (Örnek: dosya/resim.png) ${NONE} \n>>> "

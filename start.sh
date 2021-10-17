@@ -45,6 +45,7 @@ else
         printf "${GREEN}Process Finised! You Can Check Result!${NONE} \n"
         printf "$GREEN}Save Path: ./results ${NONE}"
         exit;
+    ;;
     2) clear;
         cat shell-requirements/ascii.txt
         printf "${GREEN}Gereksinimler Yükleniyor..${NONE} \n"
@@ -69,6 +70,7 @@ else
         printf "${GREEN}İşlem Bitti! Sonucu Kontrol Edebilirsiniz!${NONE} \n"
         printf "$GREEN}Kayıt Yolu: ./results ${NONE}"
         exit;
+    ;;
   esac
 fi
     

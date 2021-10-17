@@ -30,7 +30,8 @@ else
         pip install gfpgan
         pip install -r requirements.txt
         python setup.py develop
-        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P experiments/pretrained_models
+        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth
+        mv RealESRGAN_x4plus.pth experiments/pretrained_models
         
         clear 
         cat shell-requirements/ascii.txt
@@ -40,7 +41,7 @@ else
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Selected ${pathen} Image. Process Starting..${NONE} \n"
-        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathen} --netscale 4 --outscale 3.5 --half --face_enhance --output reults/
+        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathen} --netscale 4 --outscale 3.5 --half --face_enhance --output results/
         
         clear 
         cat shell-requirements/ascii.txt
@@ -57,7 +58,8 @@ else
         pip install gfpgan
         pip install -r requirements.txt
         python setup.py develop
-        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P experiments/pretrained_models
+        wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth 
+        mv RealESRGAN_x4plus.pth experiments/pretrained_models
         
         clear 
         cat shell-requirements/ascii.txt
@@ -67,7 +69,7 @@ else
        
         cat shell-requirements/ascii.txt
         printf "${GREEN}${pathen} Dosyası Seçildi. İşlem Başlıyor..${NONE} \n"
-        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathtr} --netscale 4 --outscale 3.5 --half --face_enhance --output reults/
+        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathtr} --netscale 4 --outscale 3.5 --half --face_enhance --output results/
         clear 
         
         cat shell-requirements/ascii.txt

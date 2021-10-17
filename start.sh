@@ -31,15 +31,16 @@ else
         python setup.py develop
         wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P experiments/pretrained_models
         
-        python shell-requirements/preparations.py
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Select Your Image Path (ex: folder/picture.png) ${NONE} \n>>> "
         read pathen
+        
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Selected ${pathen} Image. Process Starting..${NONE} \n"
         python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input "${pathen}" --netscale 4 --outscale 3.5 --half --face_enhance
+        
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Process Finised! You Can Check Result!${NONE} \n"
@@ -62,10 +63,12 @@ else
         printf "${GREEN}Görüntü Yolunuzu Seçin (Örnek: dosya/resim.png) ${NONE} \n>>> "
         read pathtr
         clear 
+       
         cat shell-requirements/ascii.txt
         printf "${GREEN}${pathen} Dosyası Seçildi. İşlem Başlıyor..${NONE} \n"
         python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input "${pathtr}" --netscale 4 --outscale 3.5 --half --face_enhance
         clear 
+        
         cat shell-requirements/ascii.txt
         printf "${GREEN}İşlem Bitti! Sonucu Kontrol Edebilirsiniz!${NONE} \n"
         printf "$GREEN}Kayıt Yolu: ./results ${NONE}"

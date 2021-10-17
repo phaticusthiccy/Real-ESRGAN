@@ -7,6 +7,7 @@ BLUE="\033[0;34m"
 RED="\033[0;31m"
 NONE="\033[0m"
 
+mkdir results
 clear
 cat shell-requirements/ascii.txt
 sleep 1
@@ -39,7 +40,7 @@ else
         clear 
         cat shell-requirements/ascii.txt
         printf "${GREEN}Selected ${pathen} Image. Process Starting..${NONE} \n"
-        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input "${pathen}" --netscale 4 --outscale 3.5 --half --face_enhance
+        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathen} --netscale 4 --outscale 3.5 --half --face_enhance
         
         clear 
         cat shell-requirements/ascii.txt
@@ -66,7 +67,7 @@ else
        
         cat shell-requirements/ascii.txt
         printf "${GREEN}${pathen} Dosyası Seçildi. İşlem Başlıyor..${NONE} \n"
-        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input "${pathtr}" --netscale 4 --outscale 3.5 --half --face_enhance
+        python inference_realesrgan.py --model_path experiments/pretrained_models/RealESRGAN_x4plus.pth --input ${pathtr} --netscale 4 --outscale 3.5 --half --face_enhance
         clear 
         
         cat shell-requirements/ascii.txt
